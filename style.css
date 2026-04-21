@@ -298,7 +298,10 @@ section {
 }
 
 .product-card:hover .product-img-wrapper img {
-    width: 110%; height: 110%; margin-left: -5%; margin-top: -5%;
+    width: 110%; 
+    height: 110%; 
+    margin-left: -5%; 
+    margin-top: -5%;
 }
 
 .product-info {
@@ -315,7 +318,7 @@ section {
     font-size: 0.95rem;
     color: #555555;
     margin-bottom: 2rem;
-    height: 4.5em; /* limit text height to keep cards uniform */
+    height: 4.5em; 
     overflow: hidden;
 }
 
@@ -409,10 +412,18 @@ footer {
 }
 
 /* Base Flex Sizing Replacements */
-.grid-2 > * { width: 45%; }
-.spec-card { width: 28%; }
-.products-grid { gap: 3rem; }
-.product-card { width: 30%; }
+.grid-2 > * { 
+    width: 45%; 
+}
+.spec-card { 
+    width: 28%; 
+}
+.products-grid { 
+    gap: 3rem; 
+}
+.product-card { 
+    width: 30%; 
+}
 
 @media (max-width: 992px) {
     .grid-2 { flex-direction: column; text-align: center; }
