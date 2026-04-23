@@ -286,22 +286,24 @@ section {
 
 .product-img-wrapper {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 2/3;
     overflow: hidden;
+    background: #fdfaf7; /* Subtle off-white background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .product-img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .product-card:hover .product-img-wrapper img {
-    width: 110%; 
-    height: 110%; 
-    margin-left: -5%; 
-    margin-top: -5%;
+    transform: scale(1.05); /* Subtle zoom effect instead of overflow issues */
 }
 
 .product-info {
@@ -477,3 +479,368 @@ footer {
     z-index: 1001;
     width: 0%;
 }
+
+/* Monk Fruit Page & Luxury Section */
+.monkfruit-section {
+    background: #F7F0E7;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.monkfruit-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.monkfruit-image {
+    position: relative;
+    z-index: 1;
+}
+
+.monkfruit-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-style: preserve-3d;
+}
+
+.monkfruit-image img:hover {
+    transform: scale(1.05) translateY(-5px);
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.15));
+}
+
+.monkfruit-content {
+    opacity: 1;
+}
+
+.monkfruit-content .section-tagline {
+    margin-bottom: 0.5rem;
+}
+
+.monkfruit-content h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.monkfruit-content p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.monkfruit-subsection {
+    margin-top: 3rem;
+}
+
+.monkfruit-subsection h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #1A1A1A;
+}
+
+.monk-bullets {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.monk-bullets li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.monk-bullets li::before {
+    content: "✦";
+    color: #C5A059;
+    font-size: 0.9rem;
+}
+
+.monk-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #A67C52;
+    margin-top: 2rem;
+}
+
+/* Micro-interactions & Fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-links a.active {
+    color: #C5A059;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #C5A059;
+}
+
+/* Responsive for Monkfruit */
+@media (max-width: 992px) {
+    .monkfruit-section {
+        height: auto;
+        padding: 8rem 0;
+    }
+    .monkfruit-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 4rem;
+    }
+    .monkfruit-image img {
+        margin: 0 auto;
+    }
+    .monk-bullets li {
+        justify-content: center;
+    }
+}
+
+/* Product Detail View & Cart */
+.cart-icon-wrapper {
+    position: relative;
+    cursor: pointer;
+    margin-left: 2rem;
+    display: none; /* Hidden by default, shown in detail view */
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background: #C5A059;
+    color: white;
+    font-size: 0.6rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Product Detail Section */
+.product-view {
+    display: none; /* Hidden by default */
+    background: #F7F0E7;
+    min-height: 80vh;
+    padding: 6rem 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.product-view.active {
+    display: block;
+    opacity: 1;
+}
+
+.product-view-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.product-image-large {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.15));
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-image-large:hover {
+    transform: scale(1.03);
+}
+
+.product-info {
+}
+
+.product-info h2 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+.product-description {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #444;
+}
+
+.product-features {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.product-features li {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-features li::before {
+    content: "✦";
+    color: #C5A059;
+}
+
+/* Quantity Selector */
+.quantity-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.qty-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #1A1A1A;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.qty-btn:hover {
+    background: #1A1A1A;
+    color: white;
+}
+
+.qty-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 30px;
+    text-align: center;
+}
+
+.add-to-cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.confirmation-msg {
+    color: #C5A059;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.confirmation-msg.show {
+    opacity: 1;
+}
+
+.back-btn {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+/* Transitions */
+.products-grid.hidden {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .product-view-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .product-image-container {
+        order: 1;
+    }
+    .product-info {
+        order: 2;
+        text-align: center;
+    }
+    .product-features li {
+        justify-content: center;
+    }
+    .quantity-box {
+        justify-content: center;
+    }
+}
+
+/* Monk Fruit Page - Static & Natural */
+.monkfruit-image {
+    position: relative;
+    display: inline-block;
+}
+
+.monkfruit-image img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+}
+
+.emboss-text {
+    font-family: 'Cormorant Garamond', serif;
+    color: #1A1A1A;
+    /* Very subtle emboss for luxury feel */
+    text-shadow: -0.5px -0.5px 1px rgba(255,255,255,0.8), 
+                 0.5px 0.5px 1px rgba(0,0,0,0.1);
+}
+
+/* Disable all motion/hover for this section */
+.monkfruit-section, 
+.monkfruit-section * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+.monkfruit-section {
+    pointer-events: auto;
+}
+
+
