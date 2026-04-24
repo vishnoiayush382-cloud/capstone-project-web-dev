@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | Origine 1847</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <header>
+        <nav class="container">
+            <div class="nav-logo">
+                <a href="index.html"><img src="assets/textLogo-removebg-preview.png" alt="Origine 1847 Logo" id="main-logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="products.html">All Products</a></li>
+                <li><a href="monkfruit.html">Monk Fruit</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <div class="cart-icon-wrapper">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-hero hero-section fade-in" style="height: 50vh; padding: 4rem 0;">
+            <div class="container hero-content">
+                <h1>The Collection</h1>
+                <p class="hero-subtext">Indulgence without compromise. No sugar, just pure taste.</p>
+            </div>
+        </section>
+
+        <section id="products" class="products-section fade-in">
+            <div class="container">
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card fade-up">
+                        <div class="product-img-wrapper">
+                            <img src="assets/original.jpeg" alt="The OG47">
+                        </div>
+                        <div class="product-info">
+                            <h3>The OG47</h3>
+                            <p>The signature creation of Origine 1847. A rich, smooth, and perfectly balanced chocolate crafted with monk fruit and allulose.</p>
+                            <a href="#" class="btn btn-gold">Shop Now</a>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card fade-up">
+                        <div class="product-img-wrapper">
+                            <img src="assets/hazelnut.png" alt="The Hazelnut">
+                        </div>
+                        <div class="product-info">
+                            <h3>The Hazelnut</h3>
+                            <p>A luxurious blend of roasted hazelnuts and silky chocolate. Nutty, creamy, and indulgent — designed for depth.</p>
+                            <a href="#" class="btn btn-gold">Shop Now</a>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card fade-up">
+                        <div class="product-img-wrapper">
+                            <img src="assets/mixed_nuts.jpeg" alt="Mixed Nuts">
+                        </div>
+                        <div class="product-info">
+                            <h3>Mixed Nuts</h3>
+                            <p>A power-packed combination of premium nuts coated in our signature chocolate. Crunchy and wholesome.</p>
+                            <a href="#" class="btn btn-gold">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Dynamic Product Detail View -->
+        <section id="product-detail-view" class="product-view">
+            <div class="container">
+                <div class="back-btn" id="close-product-view">← Back to Collection</div>
+                <div class="product-view-container">
+                    <div class="product-image-container">
+                        <img src="" alt="Product Image" class="product-image-large" id="detail-image">
+                    </div>
+                    <div class="product-info">
+                        <h2 id="detail-title">Product Name</h2>
+                        <span class="section-tagline" style="margin-top: -1rem; display: block; font-size: 0.9rem;">India's first 50% pure natural monk fruit chocolate with allulose</span>
+                        <p class="product-description" id="detail-description">
+                            Crafted using finest cocoa and 50% natural monk fruit, delivering rich sweetness with zero sugar compromise.
+                        </p>
+                        <ul class="product-features">
+                            <li>50% Monk Fruit + Allulose</li>
+                            <li>Zero sugar spike</li>
+                            <li>No crash</li>
+                            <li>Premium indulgence</li>
+                        </ul>
+                        
+                        <div class="quantity-box">
+                            <button class="qty-btn" id="qty-minus">-</button>
+                            <span class="qty-value" id="qty-count">1</span>
+                            <button class="qty-btn" id="qty-plus">+</button>
+                        </div>
+                        <p id="qty-warning" style="color: #A67C52; font-size: 0.85rem; display: none; margin-top: -2rem; margin-bottom: 2rem;">Maximum 5 units per product.</p>
+
+                        <div class="add-to-cart-container">
+                            <button class="btn btn-gold" id="add-to-cart-btn">Add to Cart</button>
+                            <span class="confirmation-msg" id="cart-msg">Item added to cart!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="assets/textLogo.png" alt="Origine 1847">
+            </div>
+            <div class="footer-tagline">
+                <p>Health meets taste.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/origine1847?igsh=MXJ0aDJvdHdwd3BrbQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/company/origine-1847/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Origine 1847. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
