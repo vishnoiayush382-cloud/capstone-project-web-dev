@@ -16,7 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-
 h1, h2, h3 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
@@ -34,7 +33,6 @@ ul {
     list-style: none;
 }
 
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -51,7 +49,6 @@ ul {
     align-items: center;
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 1rem 2.5rem;
@@ -71,7 +68,8 @@ ul {
 
 .btn-primary:hover {
     background: #C5A059;
-    position: relative; top: -3px;
+    position: relative; 
+    top: -3px;
 }
 
 .btn-gold {
@@ -107,7 +105,6 @@ ul {
     padding-bottom: 2px;
 }
 
-/* Header & Nav */
 header {
     background: #F6EDE4;
     position: sticky;
@@ -140,7 +137,6 @@ nav {
     color: #C5A059;
 }
 
-/* Sections */
 section {
     padding: 8rem 0;
 }
@@ -163,7 +159,6 @@ section {
     font-size: 3.5rem;
 }
 
-/* Hero Section */
 .hero-section {
     height: 90vh;
     display: flex;
@@ -202,7 +197,6 @@ section {
     justify-content: center;
 }
 
-/* About Section */
 .about-image {
     position: relative;
     padding: 2rem;
@@ -233,7 +227,6 @@ section {
     margin-top: 2rem;
 }
 
-/* Specialization Cards */
 .spec-grid {
     display: flex;
     flex-wrap: wrap;
@@ -265,7 +258,6 @@ section {
     margin-bottom: 1rem;
 }
 
-/* Product Cards */
 .products-grid {
     display: flex;
     flex-wrap: wrap;
@@ -288,7 +280,7 @@ section {
     width: 100%;
     aspect-ratio: 2/3;
     overflow: hidden;
-    background: #fdfaf7; /* Subtle off-white background */
+    background: #fdfaf7;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,7 +295,7 @@ section {
 }
 
 .product-card:hover .product-img-wrapper img {
-    transform: scale(1.05); /* Subtle zoom effect instead of overflow issues */
+    transform: scale(1.05);
 }
 
 .product-info {
@@ -331,7 +323,6 @@ section {
     overflow: hidden;
 }
 
-/* Why Section */
 .why-section {
     background: #1A1A1A;
     color: #FFFFFF;
@@ -369,7 +360,6 @@ section {
     margin-bottom: 1rem;
 }
 
-/* CTA Section */
 .cta-section {
     text-align: center;
     padding: 10rem 2rem;
@@ -380,11 +370,10 @@ section {
     margin-bottom: 3rem;
 }
 
-/* Footer */
 footer {
     padding: 6rem 0 3rem;
     background: rgba(255,255,255,0.9);
-    border-top: 1px solid rgba(197,160,89,0.1);
+    border-top: 1px solid rgba(197, 160, 89, 0.1);
     text-align: center;
 }
 
@@ -420,7 +409,6 @@ footer {
     color: #888;
 }
 
-/* Base Flex Sizing Replacements */
 .grid-2 > * { 
     width: 45%; 
 }
@@ -446,7 +434,6 @@ footer {
     .product-card { width: 100%; }
 }
 
-/* Animations */
 .fade-up {
     opacity: 0;
     position: relative;
@@ -476,7 +463,6 @@ footer {
     100% { top: 0px; }
 }
 
-/* Scroll Progress (Kept without edit) */
 .scroll-progress {
     position: fixed;
     top: 0;
@@ -487,7 +473,6 @@ footer {
     width: 0%;
 }
 
-/* Monk Fruit Page & Luxury Section */
 .monkfruit-section {
     background: #F7F0E7;
     height: 100vh;
@@ -529,26 +514,6 @@ footer {
     filter: drop-shadow(0 30px 60px rgba(0,0,0,0.15));
 }
 
-.monkfruit-content {
-    opacity: 1;
-}
-
-.monkfruit-content .section-tagline {
-    margin-bottom: 0.5rem;
-}
-
-.monkfruit-content h2 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-}
-
-.monkfruit-content p {
-    font-size: 1.2rem;
-    color: #444;
-    margin-bottom: 2.5rem;
-    line-height: 1.8;
-}
-
 .monkfruit-subsection {
     margin-top: 3rem;
 }
@@ -586,7 +551,6 @@ footer {
     margin-top: 2rem;
 }
 
-/* Micro-interactions & Fade-in */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -613,7 +577,6 @@ footer {
     background: #C5A059;
 }
 
-/* Responsive for Monkfruit */
 @media (max-width: 992px) {
     .monkfruit-section {
         height: auto;
@@ -632,13 +595,8 @@ footer {
     }
 }
 
-
-
-
-
-/* Product Detail Section */
 .product-view {
-    display: none; /* Hidden by default */
+    display: none;
     background: #F7F0E7;
     min-height: 80vh;
     padding: 6rem 0;
@@ -673,9 +631,6 @@ footer {
 
 .product-image-large:hover {
     transform: scale(1.03);
-}
-
-.product-info {
 }
 
 .product-info h2 {
@@ -714,10 +669,6 @@ footer {
     color: #C5A059;
 }
 
-
-
-
-
 .back-btn {
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -727,7 +678,6 @@ footer {
     display: inline-block;
 }
 
-/* Transitions */
 .products-grid.hidden {
     display: none;
 }
@@ -747,10 +697,8 @@ footer {
     .product-features li {
         justify-content: center;
     }
-
 }
 
-/* Monk Fruit Page - Static & Natural */
 .monkfruit-image {
     position: relative;
     display: inline-block;
@@ -767,12 +715,10 @@ footer {
 .emboss-text {
     font-family: 'Cormorant Garamond', serif;
     color: #1A1A1A;
-    /* Very subtle emboss for luxury feel */
     text-shadow: -0.5px -0.5px 1px rgba(255,255,255,0.8), 
                  0.5px 0.5px 1px rgba(0,0,0,0.1);
 }
 
-/* Disable all motion/hover for this section */
 .monkfruit-section, 
 .monkfruit-section * {
     animation: none !important;
@@ -783,5 +729,3 @@ footer {
 .monkfruit-section {
     pointer-events: auto;
 }
-
-
