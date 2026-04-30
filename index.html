@@ -101,7 +101,50 @@
             </div>
         </section>
 
-        <section class="cta-section fade-up">
+        <section id="products" class="products-section fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Signature Creations</span>
+                    <h2>Our Chocolates</h2>
+                </div>
+                <div class="products-grid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Detail View (Hidden by default) -->
+        <section id="product-detail-view" class="product-view">
+            <div class="container">
+                <div class="back-btn" id="close-product-view">← Back to Collection</div>
+                <div class="product-view-container">
+                    <div class="product-image-container">
+                        <img src="" alt="Product Image" class="product-image-large" id="detail-image">
+                    </div>
+                    <div class="product-info">
+                        <h2 id="detail-title">Product Name</h2>
+                        <p class="detail-price" id="detail-price">₹249</p>
+                        <p class="product-description" id="detail-description"></p>
+                        <ul class="product-features">
+                            <li>0 Sugar Added</li>
+                            <li>Natural Monk Fruit</li>
+                            <li>Keto Friendly</li>
+                        </ul>
+                        <div class="product-purchase">
+                            <div class="quantity-selector">
+                                <span class="qty-label">Quantity</span>
+                                <div class="qty-controls">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                            <button class="btn btn-gold btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
             <div class="container">
                 <h2>Experience the Future of Desserts</h2>
                 <a href="products.html" class="btn btn-gold btn-large">Shop Now</a>

@@ -51,11 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
     async function fetchProducts() {
         try {
             const response = await fetch(`${API_URL}/products`);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const products = await response.json();
             renderProducts(products);
         } catch (error) {
             console.error("Error fetching products:", error);
-            if (productsGrid) productsGrid.innerHTML = `<p class="error-msg" style="grid-column: 1/-1; text-align: center; color: #c0392b; font-weight: 600;">Failed to load products. Make sure the backend is running.</p>`;
+            if (productsGrid) {
+                productsGrid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 3rem; background: rgba(192, 57, 43, 0.05); border: 1px solid rgba(192, 57, 43, 0.2);">
+                        <p style="color: #c0392b; font-weight: 600; margin-bottom: 1rem;">Failed to load products.</p>
+                        <p style="font-size: 0.9rem; color: #666;">Error: ${error.message}</p>
+                        <p style="font-size: 0.8rem; margin-top: 1rem;">Make sure the backend is running at ${API_URL}</p>
+                    </div>
+                `;
+            }
         }
     }
 
