@@ -14,11 +14,17 @@
             <div class="nav-logo">
                 <a href="index.html"><img src="assets/textLogo-removebg-preview.png" alt="Origine 1847 Logo" id="main-logo"></a>
             </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
-                <li><a href="about.html">Our Story</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">All Products</a></li>
-                <li><a href="monkfruit.html">Monk Fruit</a></li>
+                <li><a href="add_product.html">Add Product</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="cart-link">Cart (0)</a></li>
             </ul>
             <div class="nav-cta">
                 <a href="#products" class="btn btn-primary">Shop Now</a>
@@ -27,7 +33,7 @@
     </header>
 
     <main>
-        <section class="products-hero hero-section fade-in" style="height: 50vh; padding: 4rem 0;">
+        <section class="products-hero hero-section fade-in" style="height: auto; padding: 4rem 0 2rem;">
             <div class="container hero-content">
                 <h1>The Collection</h1>
                 <p class="hero-subtext">Indulgence without compromise. No sugar, just pure taste.</p>
@@ -37,39 +43,7 @@
         <section id="products" class="products-section fade-in">
             <div class="container">
                 <div class="products-grid">
-                    <div class="product-card fade-up" data-id="og47" data-name="The OG47" data-price="249">
-                        <div class="product-img-wrapper">
-                            <img src="assets/original.jpeg" alt="The OG47">
-                        </div>
-                        <div class="product-info">
-                            <h3>The OG47</h3>
-                            <p class="product-price">₹249</p>
-                            <p>The signature creation of Origine 1847. A rich, smooth, and perfectly balanced chocolate crafted with monk fruit and allulose.</p>
-                            <a href="#" class="btn btn-gold">Shop Now</a>
-                        </div>
-                    </div>
-                    <div class="product-card fade-up" data-id="hazelnut" data-name="The Hazelnut" data-price="299">
-                        <div class="product-img-wrapper">
-                            <img src="assets/hazelnut.png" alt="The Hazelnut">
-                        </div>
-                        <div class="product-info">
-                            <h3>The Hazelnut</h3>
-                            <p class="product-price">₹299</p>
-                            <p>A luxurious blend of roasted hazelnuts and silky chocolate. Nutty, creamy, and indulgent — designed for depth.</p>
-                            <a href="#" class="btn btn-gold">Shop Now</a>
-                        </div>
-                    </div>
-                    <div class="product-card fade-up" data-id="mixed_nuts" data-name="Mixed Nuts" data-price="299">
-                        <div class="product-img-wrapper">
-                            <img src="assets/mixed_nuts.jpeg" alt="Mixed Nuts">
-                        </div>
-                        <div class="product-info">
-                            <h3>Mixed Nuts</h3>
-                            <p class="product-price">₹299</p>
-                            <p>A power-packed combination of premium nuts coated in our signature chocolate. Crunchy and wholesome.</p>
-                            <a href="#" class="btn btn-gold">Shop Now</a>
-                        </div>
-                    </div>
+                    <!-- Products will be loaded dynamically from the Flask API -->
                 </div>
             </div>
         </section>
@@ -93,11 +67,43 @@
                             <li>No crash</li>
                             <li>Premium indulgence</li>
                         </ul>
+
+                        <div class="product-purchase">
+                            <div class="quantity-selector">
+                                <span class="qty-label">Quantity</span>
+                                <div class="qty-controls">
+                                    <button type="button" class="qty-btn btn-minus">−</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button type="button" class="qty-btn btn-plus">+</button>
+                                </div>
+                            </div>
+                            <button class="btn btn-gold btn-add-cart">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Indulgences</h2>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div id="cart-items" class="cart-items">
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-amount">₹0</span>
+                </div>
+                <button class="btn btn-gold" style="width: 100%;">Checkout</button>
+                <div id="clear-cart-btn" class="clear-cart-btn">Clear Cart</div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container footer-content">

@@ -16,11 +16,17 @@
             <div class="nav-logo">
                 <a href="index.html"><img src="assets/textLogo-removebg-preview.png" alt="Origine 1847 Logo" id="main-logo"></a>
             </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
-                <li><a href="about.html">Our Story</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">All Products</a></li>
-                <li><a href="monkfruit.html">Monk Fruit</a></li>
+                <li><a href="add_product.html">Add Product</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="cart-link">Cart (0)</a></li>
             </ul>
             <div class="nav-cta">
                 <a href="products.html" class="btn btn-primary">Shop Now</a>
@@ -102,6 +108,26 @@
             </div>
         </section>
     </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Indulgences</h2>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div id="cart-items" class="cart-items">
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-amount">₹0</span>
+                </div>
+                <button class="btn btn-gold" style="width: 100%;">Checkout</button>
+                <div id="clear-cart-btn" class="clear-cart-btn">Clear Cart</div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container footer-content">
