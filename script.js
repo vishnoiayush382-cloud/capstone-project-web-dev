@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const API_URL = "http://127.0.0.1:5000/api";
+    const API_URL = "http://127.0.0.1:5001/api";
 
     // Scroll Progress logic
     const scrollBar = document.querySelector('.scroll-progress');
