@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | Origine 1847</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <header>
+        <nav class="container">
+            <div class="nav-logo">
+                <a href="index.html"><img src="assets/textLogo-removebg-preview.png" alt="Origine 1847 Logo" id="main-logo"></a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">All Products</a></li>
+                <li><a href="add_product.html">Add Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="cart-link">Cart (0)</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-hero hero-section fade-in" style="height: auto; padding: 4rem 0 2rem;">
+            <div class="container hero-content">
+                <h1>The Collection</h1>
+                <p class="hero-subtext">Indulgence without compromise. No sugar, just pure taste.</p>
+            </div>
+        </section>
+
+        <section id="products" class="products-section fade-in">
+            <div class="container">
+                <div class="products-grid">
+                    <!-- Products will be loaded dynamically from the Flask API -->
+                </div>
+            </div>
+        </section>
+        <section id="product-detail-view" class="product-view">
+            <div class="container">
+                <div class="back-btn" id="close-product-view">← Back to Collection</div>
+                <div class="product-view-container">
+                    <div class="product-image-container">
+                        <img src="" alt="Product Image" class="product-image-large" id="detail-image">
+                    </div>
+                    <div class="product-info">
+                        <h2 id="detail-title">Product Name</h2>
+                        <p class="detail-price" id="detail-price">₹249</p>
+                        <span class="section-tagline" style="margin-top: -1rem; display: block; font-size: 0.9rem;">India's first 50% pure natural monk fruit chocolate with allulose</span>
+                        <p class="product-description" id="detail-description">
+                            Crafted using finest cocoa and 50% natural monk fruit, delivering rich sweetness with zero sugar compromise.
+                        </p>
+                        <ul class="product-features">
+                            <li>50% Monk Fruit + Allulose</li>
+                            <li>Zero sugar spike</li>
+                            <li>No crash</li>
+                            <li>Premium indulgence</li>
+                        </ul>
+
+                        <div class="product-purchase">
+                            <div class="quantity-selector">
+                                <span class="qty-label">Quantity</span>
+                                <div class="qty-controls">
+                                    <button type="button" class="qty-btn btn-minus">−</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button type="button" class="qty-btn btn-plus">+</button>
+                                </div>
+                            </div>
+                            <button class="btn btn-gold btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Indulgences</h2>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div id="cart-items" class="cart-items">
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-amount">₹0</span>
+                </div>
+                <button class="btn btn-gold" style="width: 100%;">Checkout</button>
+                <div id="clear-cart-btn" class="clear-cart-btn">Clear Cart</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="assets/textLogo.png" alt="Origine 1847">
+            </div>
+            <div class="footer-tagline">
+                <p>Health meets taste.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/origine1847?igsh=MXJ0aDJvdHdwd3BrbQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/company/origine-1847/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Origine 1847. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
